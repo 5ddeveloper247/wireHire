@@ -1,0 +1,405 @@
+.body {
+  background-color: #d5d0c2;
+  height: auto;
+}
+.bgform {
+  background-color: #d5d5d5;
+}
+.bgcolor {
+  background-color: #1d1c47;
+}
+.txtcolor {
+  color: #1d1c47;
+}
+.top {
+  height: 80px;
+  width: auto;
+  background-color: #1d1c47;
+}
+.topm {
+  width: 95%;
+  margin: auto;
+}
+.navbar1 {
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+.navdata1 {
+  float: left;
+  width: 15%;
+}
+.navdata2 {
+  width: 15%;
+  float: left;
+}
+.navdata3 {
+  width: 25%;
+  float: right;
+}
+.bsdo a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1d1c47 !important;
+}
+.banner {
+  background-image: url("../../image/banner.jpeg");
+  height: 500px;
+  background-size: cover;
+}
+.part {
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+}
+.part2 {
+  height: 300px;
+  background-color: rgb(255, 255, 255, 0.8);
+  color: #000000;
+}
+.part2 p {
+  text-align: justify;
+  font-size: 17px;
+}
+.service {
+  background-color: white;
+  height: auto;
+}
+.servicebox {
+  height: 560px;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+}
+.swiper {
+  width: 80%;
+  height: 85%;
+}
+.iconsproda i {
+  float: right;
+  background-color: black;
+  padding: 8px 10px;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.swiper-slide {
+  /* text-align: center; */
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+ewrewr .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.control {
+  position: relative;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.swiper-pagination {
+  position: relative;
+  bottom: -20px !important;
+}
+.para p {
+  text-align: justify;
+  font-size: 18px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #1d1c47 !important;
+}
+
+.footer {
+  background-color: #1d1c47;
+  height: 140px;
+}
+.mfooter {
+  background-color: #d5d0c2;
+  height: 100px;
+}
+.boxfooter {
+  width: 100%;
+  margin: auto;
+}
+.icons span {
+  color: #e9e9ef;
+  width: 15%;
+  float: left;
+  background: #1d1c47;
+  margin: 4px;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu span {
+  font-size: 16px;
+  color: #1d1c47;
+  font-weight: bold;
+  padding: 7px;
+}
+.menu {
+  /* border:1px 1px 0px 30px solid black; */
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  text-align: center;
+}
+.viewda {
+  position: relative;
+}
+.search {
+  position: absolute;
+  top: 11px;
+  right: 23px;
+}
+.bandeka {
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+}
+.page2 {
+  background-color: #1d1c47;
+  height: 600px;
+}
+.page3 {
+  background-color: white;
+  height: auto;
+}
+.banner2 {
+  background-color: #ffffff;
+  /* height:400PX; */
+}
+.formborder {
+  border-right: 1px solid rgb(215, 215, 215);
+}
+.form1 {
+  position: relative;
+}
+.lock {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 53px;
+  left: 35px;
+}
+.contactus {
+  width: 100%;
+  margin: auto;
+  margin-left: 15%;
+}
+.contactus span {
+  color: #e9e9ef;
+  width: 15%;
+  float: left;
+  background: #1d1c47;
+  margin: 4px;
+  padding: 6px 4px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.bggrey {
+  background-color: #ededed !important;
+}
+textarea {
+  height: 100px;
+}
+.Dashboardcard {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.maincarddo {
+  width: 20%;
+  height: auto;
+  float: left;
+  /* background-color: rebeccapurple; */
+  border: 1px solid grey;
+}
+.maincard {
+  width: 33.3%;
+  height: auto;
+  float: left;
+  /* background-color: rebeccapurple; */
+  border: 1px solid grey;
+}
+.cardcolor {
+  background-color: rgba(1, 1, 1, 0.2);
+}
+
+.data {
+  text-align: justify;
+}
+.data a {
+  color: #1d1c47;
+  font-size: 50px;
+}
+.profile {
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  /* position:relative; */
+  top: 200px;
+}
+.profile i {
+  font-size: 55px;
+  height: 270px;
+  position: relative;
+  top: 90px;
+  color: white;
+}
+.dainputda input {
+  height: 60px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #797896;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d1c47;
+}
+.pop1 {
+  position: fixed;
+  bottom: 0px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: rgb(144, 130, 130, 0.6);
+  max-height: 100vh;
+  z-index: 99999;
+  
+}
+.pop2Main {
+  position: fixed;
+  bottom: 0px;
+  top: 0px;
+  left: 0;
+  right: 0;
+  background-color: rgb(144, 130, 130, 0.6);
+  max-height: 100vh;
+  z-index: 999999;
+  
+}
+.model-body{
+  overflow-x: auto;
+  max-height: 200px;
+  overflow-y: none;
+}
+.pop2 {
+  position: fixed;
+  bottom: 0px;
+  top: 100px;
+  left: 0;
+  right: 0;
+  /* background-color: rgb(144, 130, 130, 0.6); */
+  max-height: 100vh;
+  z-index: 99999;
+
+}
+.popadd {
+  position: relative;
+  top: 100px;
+  /* transition: 1s; */
+}
+.popadd1 {
+  position: relative;
+  top: 300px;
+  /* transition: 1s; */
+}
+.selectdo:before {
+  content: "\f078";
+  font-family: fontawesome;
+}
+.bgmonitre {
+  background-color: #a2ada8 !important;
+}
+.eye i {
+  font-size: 44px;
+  background-color: #eaeceb !important;
+  border-radius: 50%;
+  padding: 15px;
+}
+.addtolist i {
+  font-size: 30px;
+}
+.resume i {
+  font-size: 28px;
+}
+.resume span {
+  font-size: 21px;
+  font-weight: bold;
+}
+.bgicons i {
+  background-color: #1d1c47;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+}
+.bgdarkgrey {
+  background-color: #5e6069 !important;
+}
+
+.bgdarkgrey p {
+  text-align: justify;
+}
+@media (max-width: 780px) {
+  .icons i {
+    padding: 5px;
+  }
+  .box {
+    height: 50px;
+
+    background-color: antiquewhite;
+  }
+  .menu {
+    /* border:1px 1px 0px 30px solid black; */
+    border-left: 0px solid grey;
+    border-right: 0px solid grey;
+    text-align: left;
+  }
+  .part {
+    display: none;
+  }
+}
+.shoot1 {
+  cursor: pointer;
+}
+.navdata1 {    
+  border-right: 1px solid #8186b2;
+
+}
+.navdata1 img{
+width: 100px;
+height: 76px;
+
+}
