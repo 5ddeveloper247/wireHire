@@ -7,7 +7,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\candidatemodel\Candidate;
-use Illuminate\Support\Facades\hash;
+use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\candidatemodel\Academic;
 // use Illuminate\Support\Facades\Rule;

@@ -81,7 +81,7 @@
         <div class="row">
           <div class="col-3">
             <a class="dropdown-item" href="{{route('fsu_admin_employee_account')}}">Employee Account </a>
-            <a class="dropdown-item" href="{{route('fsu_admin_archieved_accounts')}}">Archived Accounts </a>
+      
             <a class="dropdown-item" href="{{route('fsu_admin_form_request')}}">Request Forms</a>
           </div>
           <div class="col-3">
@@ -90,14 +90,12 @@
             <a class="dropdown-item" href="{{route('fsu_admin_job_position3')}}">Job Position </a>
           </div>
           <div class="col-3">
-            {{-- <a class="dropdown-item" href="{{route('fsu_admin_specific_job1')}}"> Specific Job</a> --}}
+            
             <a class="dropdown-item" href="{{route('fsu_admin_view_specfic_job')}}"> Specific Job</a>
-            {{-- <a class="dropdown-item" href="{{route('fsu_admin_applicant_ranking')}}"> Applicant Ranking </a> --}}
+          
           </div>
           <div class="col-3">
-            {{-- <a class="dropdown-item" href="{{route('fsu_admin_view_applicant_ranking')}}">View Applicant Ranking</a> --}}
-            {{-- <a class="dropdown-item" href="{{route('fsu_admin_view_calendar_interface')}}"> View Calendar </a> --}}
-            {{-- <a class="dropdown-item" href="{{route('fsu_recommend_condidate_short-list_interview_1')}}">Candidate Short-list</a>--}}
+        
             
           </div>
         </div>

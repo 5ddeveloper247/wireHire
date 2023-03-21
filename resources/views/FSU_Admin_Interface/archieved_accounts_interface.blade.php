@@ -18,6 +18,7 @@
               <div class="tablebox">
                 <table class="table table-responsive border" id="example">
                   <thead>
+
                     <th>Employe Name</th>
                     <th>Position</th>
                     <th>University ID</th>
@@ -28,269 +29,35 @@
                   </thead>
 
                   <tbody>
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
 
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
+                    @foreach ($employes as $employe )
 
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
+                      @if($employe->employee_status == 1)
 
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
+                      <tr>
+                        <td>{{$employe->name}}</td>
+                        <td>
+                          @if($employe->position == 2)
+                          {{'Fsu Member'}}
+                          @elseif($employe->position == 3)
+                          {{'Fsu Department Chair'}}
+                          @elseif($employe->position == 4)
+                          {{'Fsu Department viewer'}}
+                        @endif
+                        </td>
+                        <td>{{$employe->university_id}}</td>
+                        <td>{{$employe->Department->department}}</td>
+                        <td>{{$employe->college}}</td>
+                        <td>View Profile</td>
+                        <td class="text-center text-white">
+                          <a class="btn bgcolor px-3 text-white">Activate</a>
+                        </td>
+                      </tr>
 
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
+                    @endif
 
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>First List 1</td>
-                      <td>Department User</td>
-                      <td>123456789120</td>
-                      <td>CIS</td>
-                      <td>CCSIT</td>
-                      <td>View Profile</td>
-                      <td class="text-center text-white">
-                        <a class="btn bgcolor px-3 text-white">Activate</a>
-                      </td>
-                    </tr>
+                    @endforeach
+                   
 
                     <!-- <button class="btn bgcolor text-white my-3">
                       View Archieved Employes

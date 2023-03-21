@@ -27,12 +27,17 @@
                     <th>Department</th>
                     <th>College</th>
                     <th>More Information</th>
-                    <th>Delete</th>
                     <th>Archive</th>
+                    <th>Delete</th>
+                 
                   </thead>
 
                   <tbody>
                     @foreach ($employees as $employee )
+
+                    {{-- checking for archieved accounts --}}
+
+                    @if($employee->employee_status == 0)
                     <tr>
                       <td>{{$employee->name}}</td>
                       <td>
@@ -47,20 +52,30 @@
 
                         
                       </td>
+                      
                       <td>{{$employee->university_id}}</td>
                       <td>{{$employee->Department->department}}</td>
                       <td>{{$employee->college}}</td>
                       <td><a class="text-decoration-none" href="{{route('fsu_view_employe_view',$employee->id)}}">View Profile</a></td>
                       <td class="text-center text-white">
-                        <i class="fa-solid fa-pen-fancy bgcolor p-3"></i>
+                        <form action="{{route('change.archieved.status',$employee->id)}}" method="post">
+                          @csrf
+                          <button type="submit"  name="changeStatus"  class="btn {{$employee->employee_status == 1 ? 'btn-success' : 'btn-danger' }} ">
+                             {{$employee->employee_status == 1 ? 'Active' : 'In Active'  }}
+                             
+                            
+                            </button>
+                            <span class="loader"></span>
+                         </form>
                       </td>
                       <td class="text-center text-white">
                         <a href="{{route('delete.employe.record',$employee->id)}}" style="text-decoration:none ; color : white"><i class="fa-solid fa-trash bg-danger p-3"></i></a>
                         
                       </td>
                     </tr>
+                    @endif
                     @endforeach
-                    <a class="text-white text-decoration-none" href="Archieved Accounts Interface.html"><button class="btn bgcolor text-white my-3">
+                    <a class="text-white text-decoration-none" href="{{route('fsu_admin_archieved_accounts')}}"><button class="btn bgcolor text-white my-3">
                       View Archieved Employes
                     </button></a>
                     <button class="btn bgcolor text-white my-3 mx-3 shoot1">

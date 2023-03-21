@@ -1,4 +1,4 @@
-@extends('FSU_Admin_Interface.layout.master')
+@extends('FSU_Admin_Interface.layout.master') 
 @push('title','Fsu Dashboard')
 @push('css')
      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>

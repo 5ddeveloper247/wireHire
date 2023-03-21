@@ -45,9 +45,10 @@ Route::post('candidate/login', [AuthController::class, 'candidatelogin'])->name(
 Route::middleware(['fsuadmin'])->group(function () {
 
     Route::get('fsu/dashboard',function () {
-            return view('FSU_Admin_interface.fsu_admin_dashboard');
+            return view('FSU_Admin_Interface.fsu_admin_dashboard');
         }
     )->name('fsu.dashboard');
+
 
     // Route::get('fsu/admin/profile',function () {
     //     return view('FSU_Admin_Interface.fsu_admin_profile_interface_2');
@@ -62,71 +63,71 @@ Route::middleware(['fsuadmin'])->group(function () {
     Route::post('update/employe/profile/{id}',[EmployeController::class,'update_employe'])->name('update_employe_profile');
     Route::post('update/employe/password/{id}',[EmployeController::class,'update_password'])->name('update_employe_password');
     Route::get('delete/employe/record/{id}',[EmployeController::class,'delete_employe'])->name('delete.employe.record');
-
-
+    Route::get('archieved', [EmployeController::class, 'archievedEmploye'])->name('fsu_admin_archieved_accounts');
+    Route::post('archieved/status/{id}', [EmployeController::class, 'archieved_accounts'])->name('change.archieved.status');
 
     // status ...
     Route::post('change/status/{id}',[JobPositionController::class,'status'])->name('change.status');
 
     // job Position and criteria ...
-
     Route::get('job/position3', [JobPositionController::class, 'jobposition_view'])->name('fsu_admin_job_position3');
     Route::post('fsu/admin/job/position', [JobPositionController::class, 'job_position'])->name('job_position');
+  
 
 
 
-    route::get('archieved',function () {
-            return view('FSU_Admin_interface.archieved_accounts_interface');
-        })->name('fsu_admin_archieved_accounts');
+    // route::get('archieved',function () {
+    //      return view('FSU_Admin_Interface.archieved_accounts_interface');
+    // })->name('fsu_admin_archieved_accounts');
 
     route::get( 'form/request',function () {
-            return view('FSU_Admin_interface.request_form_interface_3');
+            return view('FSU_Admin_Interface.request_form_interface_3');
         })->name('fsu_admin_form_request');
 
     Route::get('monitor/website',function () {
-            return view('FSU_Admin_interface.monitor_website_traffic_interface');
+            return view('FSU_Admin_Interface.monitor_website_traffic_interface');
         })->name('fsu_admin_monitor_trafic');
 
     Route::get('generate/reports',function () {
-            return view('FSU_Admin_interface.fsu_admin_generate_reports_interface_1');
+            return view('FSU_Admin_Interface.fsu_admin_generate_reports_interface_1');
         })->name('fsu_admin_generate_reports');
 
     Route::get('generate/reports2',function () {
-            return view('FSU_Admin_interface.fsu_admin_generate_reports_interface_2');
+            return view('FSU_Admin_Interface.fsu_admin_generate_reports_interface_2');
         })->name('fsu_admin_generate_reports2');
 
     Route::get('specific/job',function () {
-            return view('FSU_Admin_interface.fsu_admin_specific_job_interface_1');
+            return view('FSU_Admin_Interface.fsu_admin_specific_job_interface_1');
         })->name('fsu_admin_specific_job1');
 
     Route::get('view/specific/job',function () {
-            return view('FSU_Admin_interface.fsu_admin_view_specific_job_interface');
+            return view('FSU_Admin_Interface.fsu_admin_view_specific_job_interface');
         })->name('fsu_admin_view_specfic_job');
 
     Route::get('condidate/profile/interface2',function () {
-            return view('FSU_Admin_interface.fsu_admin_condidate_profile_interface_2');
+            return view('FSU_Admin_Interface.fsu_admin_condidate_profile_interface_2');
         })->name('fsu_admin_condidate_profile');
 
     Route::get('applicant/ranking',function () {
-            return view('FSU_Admin_interface.applicant_ranking');
+            return view('FSU_Admin_Interface.applicant_ranking');
         })->name('fsu_admin_applicant_ranking');
 
     Route::get('view/applicant/ranking',function () {
-            return view('FSU_Admin_interface.fsu_admin_view_applicant_ranking_interface');
+            return view('FSU_Admin_Interface.fsu_admin_view_applicant_ranking_interface');
         })->name('fsu_admin_view_applicant_ranking');
 
     Route::get('view/calendar/interface',function () {
-            return view('FSU_Admin_interface.fsu_admin_view_calendar_interface_2');
+            return view('FSU_Admin_Interface.fsu_admin_view_calendar_interface_2');
         })->name('fsu_admin_view_calendar_interface');
 
     Route::get( 'condidate/short-list/interview_1',function () {
-        return view('FSU_Admin_interface.fsu_recommend_condidate_short-list_interview_1');
+        return view('FSU_Admin_Interface.fsu_recommend_condidate_short-list_interview_1');
     })->name('fsu_recommend_condidate_short-list_interview_1');
        
         
 
     Route::get('condidate/short-list/interview_2',function () {
-            return view('FSU_Admin_interface.fsu_recommend_condidate_short-list_interview_2');
+            return view('FSU_Admin_Interface.fsu_recommend_condidate_short-list_interview_2');
         })->name('fsu_recommend_condidate_short-list_interview_2');
 
 });

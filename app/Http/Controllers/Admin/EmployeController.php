@@ -26,7 +26,7 @@ class EmployeController extends Controller
         $employees = Employee::with('Department')->get();
        
         $users = User::all();
-        return view('FSU_Admin_interface.employee_account_managment_interface_1',compact('departs','employees','users'));
+        return view('FSU_Admin_Interface.employee_account_managment_interface_1',compact('departs','employees','users'));
     }
     public function add_employee(Request $request){
         
@@ -82,7 +82,7 @@ class EmployeController extends Controller
         
         $employee_view = Employee::find($id);
         $departs = Department::all();
-        return view('FSU_Admin_interface.view_employe_profile',compact('employee_view','departs'));
+        return view('FSU_Admin_Interface.view_employe_profile',compact('employee_view','departs'));
 
     }
 
@@ -154,6 +154,30 @@ class EmployeController extends Controller
         return redirect()->back();
 
 
+    }
+
+    // all Archieved accounts..   
+
+    public function archievedEmploye(){
+        $employes = Employee::with('user','Department')->get();
+         return view('FSU_Admin_Interface.archieved_accounts_interface',compact('employes'));
+    }
+
+    // archieved accounts status   ...
+
+    public function archieved_accounts($id){
+    
+            $employe = Employee::find($id);
+           
+            if($employe->employee_status == 1){
+                $employe->employee_status = 0;
+            }else{
+                $employe->employee_status = 1;
+            }
+            
+        $employe->save();
+        return redirect()->back();
+       
     }
 
 }

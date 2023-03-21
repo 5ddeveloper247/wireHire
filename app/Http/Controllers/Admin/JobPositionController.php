@@ -23,7 +23,7 @@ class JobPositionController extends Controller
       public function jobposition_view(){
         $positions = JobPosition::with('user','Department')->get();
         $departs = Department::all();
-        return view('FSU_Admin_interface.fsu_admin_job_position_interface_3',compact('positions','departs'));
+        return view('FSU_Admin_Interface.fsu_admin_job_position_interface_3',compact('positions','departs'));
     }
      
     public function job_position(Request $request){
