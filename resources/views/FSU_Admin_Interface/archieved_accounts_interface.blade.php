@@ -10,6 +10,7 @@
      <div class="body">
 
           <div class="page3 my-5 py-5">
+            <a href="{{route('fsu_admin_employee_account')}}" class="btn btn-danger mb-2 ms-3" style="background-color: #1d1c47">Employe,s Account</a>
           <div class="row m-0">
             <h4 class="text-white text-center py-3 bgcolor">
               Archieved Accounts
@@ -50,7 +51,11 @@
                         <td>{{$employe->college}}</td>
                         <td>View Profile</td>
                         <td class="text-center text-white">
-                          <a class="btn bgcolor px-3 text-white">Activate</a>
+                          <form action="{{route('activate.archieved.account',$employe->id)}}" method="post">
+                            @csrf
+                            <button type="submit" class="btn bgcolor px-3 text-white">Activate</button>
+                          </form>
+                          {{-- <a href="{{route('activate.archieved.account',$employe->id)}}" class="btn bgcolor px-3 text-white">Activate</a> --}}
                         </td>
                       </tr>
 

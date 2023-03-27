@@ -3,7 +3,7 @@
 namespace App\Http\Middleware\candidate_middleware;
 
 use Closure;
-use Session;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 

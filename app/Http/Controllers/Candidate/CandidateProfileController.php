@@ -17,13 +17,13 @@ class CandidateProfileController extends Controller
         // dd(Session::get('candidate_login'));
         $candidate = Candidate::find(Session::get('candidate_login'));
         $academic = Academic::where('candidate_id', Session::get('candidate_login'))->first();
-        // dd($academic);
+       
         return view('condidate_interfaces.condidates_profile_interface_1', compact('candidate', 'academic'));
     }
 
     public function update_profile(Request $request)
     {
-       
+      
 
         $request->validate([
             'firstname' => 'required|min:3|max:50',

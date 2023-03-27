@@ -9,6 +9,8 @@
     <link href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet"  type="text/css"/>
     <link href="{{asset('assets/css/style.css')}}" rel="stylesheet" type="text/css" />
    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <title>@stack('title')</title>
 
 
@@ -81,17 +83,18 @@
         <div class="row">
           <div class="col-3">
             <a class="dropdown-item" href="{{route('fsu_admin_employee_account')}}">Employee Account </a>
-      
             <a class="dropdown-item" href="{{route('fsu_admin_form_request')}}">Request Forms</a>
+            <a class="dropdown-item" href="{{route('fsu_admin_monitor_trafic')}}">Monitor Website </a>
+            
           </div>
           <div class="col-3">
-          <a class="dropdown-item" href="{{route('fsu_admin_monitor_trafic')}}">Monitor Website </a>
             <a class="dropdown-item" href="{{route('fsu_admin_generate_reports')}}">Generate Reports</a>
             <a class="dropdown-item" href="{{route('fsu_admin_job_position3')}}">Job Position </a>
+         
           </div>
           <div class="col-3">
             
-            <a class="dropdown-item" href="{{route('fsu_admin_view_specfic_job')}}"> Specific Job</a>
+            {{-- <a class="dropdown-item" href="{{route('fsu_admin_view_specfic_job')}}"> Specific Job</a> --}}
           
           </div>
           <div class="col-3">

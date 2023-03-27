@@ -9,6 +9,7 @@
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --> --}}
     <link href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>@stack('title')</title>
     @stack('css')
@@ -53,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav bsdo me-auto mb-2 mb-lg-0">
                         <li class="nav-item active mx-2">
-                            <a class="nav-link active" href="Department User Dashboard.html">Home <span
+                            <a class="nav-link active" href="{{route('depart_user_dashoard')}}">Home <span
                                     class="sr-only"></span></a>
                         </li>
                         <li class="nav-item active dropdown">
@@ -65,7 +66,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mx-2" href="ContactUS Page.html">Contact Us</a>
+                            <a class="nav-link active mx-2" href="{{route('contact_us')}}">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active mx-2" href="{{route('logout')}}">Log Out</a>
@@ -123,11 +124,11 @@
                                 </div>
                             </div>
                             <div class="col-md-4 viewda footer1">
-                                <div class="box">
+                                {{-- <div class="box">
                                     <input type="text" class="form-control" placeholder="Search Here" />
                                     <span><i class="fa-sharp fa-solid fa-magnifying-glass search"></i>
                                     </span>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -143,6 +144,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
      <script>
         function showSubMenu() {
             if ($('.submenu').css('display') != 'block') {

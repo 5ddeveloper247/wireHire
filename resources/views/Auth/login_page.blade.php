@@ -52,7 +52,7 @@
               <input class="form-control me-2" type="search"  placeholder="Search"  aria-label="Search"   />     
 
             </form>
-          </div>
+          </div> 
         </div>
       </div>
       <div class="topm">
@@ -97,7 +97,7 @@
                 <div class="row">
                   <div class="col-md-4 formborder">
                     <div class="form1 p-4">
-                      <i class="fa-solid bandeka fa-xmark"></i>
+                      {{-- <i class="fa-solid bandeka fa-xmark"></i> --}}
                       <h1 class="text-center mt-4">LOG IN</h1>
                       @error('email')
                           <div class="text-danger">{{$message}}</div>

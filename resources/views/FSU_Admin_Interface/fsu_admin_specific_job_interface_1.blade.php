@@ -14,11 +14,11 @@
             <div class="col-md-9 m-auto">
               <div class="row">
                 <div class="col-md-12">
-                  <button
+                  {{-- <button
                     class="btn float-end bgcolor text-white my-3 mx-3 px-3"
                   >
                     Add
-                  </button>
+                  </button> --}}
                 </div>
               </div>
               <div class="row">

@@ -14,7 +14,7 @@
                   <button
                     class="btn float-end bgcolor text-white my-3 mx-3 px-3"
                   >
-                    Add
+                    create new Advertisement
                   </button>
                 </div>
               </div>
@@ -842,15 +842,4 @@
       });
     </script>
 
-      <script>
-   
-        function showSubMenu(){
-            if($('.submenu').css('display') != 'block'){
-              $('.submenu').show();
-            }else{
-              $('.submenu').hide();
-            }
-        }
-     
-    </script>
 @endpush

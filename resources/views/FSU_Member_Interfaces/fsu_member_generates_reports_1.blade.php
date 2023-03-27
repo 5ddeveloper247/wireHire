@@ -1,8 +1,9 @@
-@extends('FSU_Admin_Interface.layout.master')
-@push('title','Generates Reports interface 1')
+@extends('FSU_Member_Interfaces.layout.master')
+@push('title','Member Generates reports')
 @push('css')
- 
+     <link href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"  rel="stylesheet"/>
 @endpush
+
 @section('main-content')
         <h4 class="text-white text-center py-3 bgcolor">
           Generate Reports
@@ -64,9 +65,9 @@
             </div>
                 </div>
 
-                    <a class="text-dark text-decoration-none" href="{{route('fsu_admin_generate_reports2')}}"> <button class="btn bgcolor text-white inline float-end mx-1">Generate Report</button></a>
+                    <a class="text-dark text-decoration-none" href="{{route('fsu.member.generate.reports2')}}"> <button class="btn bgcolor text-white inline float-end mx-1">Generate Report</button></a>
                         
-                    <a class="text-dark text-decoration-none" href="{{route('fsu.dashboard')}}">  <button class="btn btn-outline-secondary inline float-end mx-1">Cancel</button></a>
+                    <a class="text-dark text-decoration-none" href="{{route('member.interfaces')}}">  <button class="btn btn-outline-secondary inline float-end mx-1">Cancel</button></a>
                     </div>
 
           
@@ -78,15 +79,22 @@
 @endsection
 
 @push('script')
- <script>
+       <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+
+      <script>
    
-      function showSubMenu(){
-          if($('.submenu').css('display') != 'block'){
-            $('.submenu').show();
-          }else{
-            $('.submenu').hide();
-          }
-      }
-    
+        function showSubMenu(){
+            if($('.submenu').css('display') != 'block'){
+              $('.submenu').show();
+            }else{
+              $('.submenu').hide();
+            }
+        }
+     
     </script>
 @endpush

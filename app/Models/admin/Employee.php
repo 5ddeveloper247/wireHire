@@ -15,7 +15,6 @@ class Employee extends Model
        'national_id',
        'university_id',
        'email_address',
-
        'depart_id',
        'college',
        'tel_number',

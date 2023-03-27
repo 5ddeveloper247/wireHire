@@ -14,7 +14,7 @@
           <div>
             <div class="head ">
               <h4 class=" mt-3 text-white">Dr Abdullah Qahtani</h4>
-              <a class="text-white text-decoration-none" href="Department calendar interface 1.html">
+              <a class="text-white text-decoration-none" href="{{route('depart_user_profile')}}">
                 <div class="h4 text-center txtcolor bg-white py-3 mt-4">Profile</div>
               </a>
               <a class="text-white text-decoration-none" href="{{route('fsu_admin_condidate_profile')}}">

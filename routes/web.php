@@ -2,15 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\candidate\CandidateController;
-use App\Http\Controllers\candidate\CandidateProfileController;
+use App\Http\Controllers\Candidate\CandidateController;
+use App\Http\Controllers\Candidate\CandidateProfileController;
 use App\Http\Controllers\Admin\EmployeController;
 use App\Http\Controllers\Admin\JobPositionController;
 use App\Http\Controllers\Admin\FsuAdminController;
+use App\Http\Controllers\fsumember\MemberProfileController;
+
 
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Candidate\JobListingController;
-
+use App\Http\Controllers\department\RequestController;
 use Illuminate\Support\Facades\Session;
 
 
@@ -43,18 +45,16 @@ Route::post('candidate/login', [AuthController::class, 'candidatelogin'])->name(
 // FSU ADMIN Dashboard.... and middleware
 
 Route::middleware(['fsuadmin'])->group(function () {
-
     Route::get('fsu/dashboard',function () {
             return view('FSU_Admin_Interface.fsu_admin_dashboard');
-        }
-    )->name('fsu.dashboard');
+        })->name('fsu.dashboard');
 
 
-    // Route::get('fsu/admin/profile',function () {
-    //     return view('FSU_Admin_Interface.fsu_admin_profile_interface_2');
-    //     }
-    // )->name('fsu_admin_profile');
-    Route::get('fsu/admin/profile',[ProfileController::class,'admin_profile'])->name('fsu_admin_profile');
+    
+    Route::get('fsu/admin/profile',[ProfileController::class,'adminProfile'])->name('fsu_admin_profile');
+    Route::post('fsu/admin/update/profile/{id}',[ProfileCOntroller::class,'updateProfile'])->name('admin.profile.update');
+    Route::get('fsu/admin/password',[ProfileController::class,'adminPassword'])->name('admin.password');
+
 
     // employee account ...
     Route::get('employee/account', [EmployeController::class, 'employe'])->name('fsu_admin_employee_account');
@@ -63,8 +63,11 @@ Route::middleware(['fsuadmin'])->group(function () {
     Route::post('update/employe/profile/{id}',[EmployeController::class,'update_employe'])->name('update_employe_profile');
     Route::post('update/employe/password/{id}',[EmployeController::class,'update_password'])->name('update_employe_password');
     Route::get('delete/employe/record/{id}',[EmployeController::class,'delete_employe'])->name('delete.employe.record');
+
+    // Archieved ......
     Route::get('archieved', [EmployeController::class, 'archievedEmploye'])->name('fsu_admin_archieved_accounts');
     Route::post('archieved/status/{id}', [EmployeController::class, 'archieved_accounts'])->name('change.archieved.status');
+    Route::post('activate/archived/account/{id}',[EmployeController::class,'activateAccount'])->name('activate.archieved.account');
 
     // status ...
     Route::post('change/status/{id}',[JobPositionController::class,'status'])->name('change.status');
@@ -72,12 +75,15 @@ Route::middleware(['fsuadmin'])->group(function () {
     // job Position and criteria ...
     Route::get('job/position3', [JobPositionController::class, 'jobposition_view'])->name('fsu_admin_job_position3');
     Route::post('fsu/admin/job/position', [JobPositionController::class, 'job_position'])->name('job_position');
+
+    // Approve position ... 
+    Route::post('fsu/admin/job/approve/{id}', [JobPositionController::class, 'approve'])->name('approve.status');
   
 
 
 
     // route::get('archieved',function () {
-    //      return view('FSU_Admin_Interface.archieved_accounts_interface');
+    //      return view('FSU_Admin_interface.archieved_accounts_interface');
     // })->name('fsu_admin_archieved_accounts');
 
     route::get( 'form/request',function () {
@@ -139,26 +145,44 @@ Route::middleware(['fsuadmin'])->group(function () {
 Route::middleware(['fsumember'])->group(function () {
 
     Route::get('fsu/member/interface',function () {
-            return view('FSU_Member_Interfaces.fsu_member_interfaces');
-        })->name('member.interfaces');
+         return view('FSU_Member_Interfaces.fsu_member_interfaces');
+    })->name('member.interfaces');
 
+    Route::get('fsu/member/specificjob',function () {
+        return view('FSU_Member_Interfaces.fsu_member_specific_job_interface');
+   })->name('specific.jobinterface');
 
+    Route::get('member/generate/reports',function () {
+        return view('FSU_Member_Interfaces.fsu_member_generates_reports_1');
+    })->name('fsu.member.generate.reports');
 
-    Route::get('fsu/member/interfaces1',function () {
-            return view('FSU_Member_Interfaces.fsu_member_job_position_interface_3');
-        })->name('fsu_member_job_interfaces_3');
+    Route::get('member/generate/reports2',function () {
+        return view('FSU_Member_Interfaces.fsu_member_generates_reports_2');
+    })->name('fsu.member.generate.reports2');
 
-    Route::get('fsu/member/specific/job',function () {
-            return view('FSU_Member_Interfaces.fsu_member_specific_job_interface');
-        })->name('fsu_member_specific_job');
+    
+    Route::get('fsu/member/interfaces1', [JobPositionController::class, 'jobpositionMember_view'])->name('fsu_member_job_interfaces_3');
+    Route::post('fsu/member/job/position', [JobPositionController::class, 'job_position'])->name('job_position_member');
+    Route::post('change/job_status_member/{id}',[JobPositionController::class,'status'])->name('change.job_status_member');
+    Route::get('fsu/member/profile2/interface',[MemberProfileController::class,'memberProfile'])->name('fsu_member_profile_interface2');
+    Route::post('fsu/member/profile2/update/{id}',[MemberProfileController::class,'updateMemberProfile'])->name('update.member.profile');
+    Route::post('fsu/member/password/update',[MemberProfileController::class,'updatePassword'])->name('member.password.updated');
+
+//     Route::get('fsu/member/interfaces1',function () {
+//             return view('FSU_Member_Interfaces.fsu_member_job_position_interface_3');
+//         })->name('fsu_member_job_interfaces_3');
+
+    // Route::get('fsu/member/specific/job',function () {
+    //         return view('FSU_Member_Interfaces.fsu_member_specific_job_interface');
+    //     })->name('fsu_member_specific_job');
 
     Route::get('fsu/member/profile/interface',function () {
             return view('FSU_Member_Interfaces.fsu_member_candidate_profile_interface_1');
         })->name('fsu_member_profile_interface1');
 
-    Route::get('fsu/member/profile2/interface',function () {
-            return view('FSU_Member_Interfaces.fsu_member_profile_interface_2');
-        })->name('fsu_member_profile_interface2');
+    // Route::get('fsu/member/profile2/interface',function () {
+    //         return view('FSU_Member_Interfaces.fsu_member_profile_interface_2');
+    //     })->name('fsu_member_profile_interface2');
 
     Route::get('member/applicant/interface',function () {
             return view('FSU_Member_Interfaces.fsu_member_applicant_ranking_interface');
@@ -222,21 +246,35 @@ Route::middleware(['candidate'])->group(function () {
 // Department user Interfaces and middleware    
 
 Route::middleware(['fsudepart'])->group(function () {
-    Route::get('department/user/dashboard',function () {
-            return view('department_user_interfaces.department_user_dashboard');
-        })->name('depart_user_profile');
 
     Route::get('department/user/profile',function () {
-            return view('department_user_interfaces.department_user_profile_2');
+        return view('department_user_interfaces.department_user_profile_2');
+    })->name('depart_user_profile');
+
+    Route::get('department/user/dashboard',function () {
+            return view('department_user_interfaces.department_user_dashboard');
         })->name('depart_user_dashoard');
 
-    Route::get('department/user/all/request/form',function () {
-            return view('department_user_interfaces.all_request_forms_interface_1');
-        })->name('all_request_form');
+ 
 
-    Route::get('department/calender',function () {
-            return view('department_user_interfaces.department_calendar_interface_2');
-        })->name('department_calender');
+       // employe request ....
+       Route::get('department/user/requests',[RequestController::class,'showRequest'])->name('all_request_form');
+       // all request ..
+       Route::get('department/user/all/requests',[RequestController::class,'fetchRequest'])->name('fetch.Requests');
+       // single request ...       
+       Route::get('department/user/single/request/{id}',[RequestController::class,'editRequest'])->name('single.request');
+       Route::get('department/user/request/delete/{id}',[RequestController::class,'deleteRequestData'])->name('delete.request');
+       Route::post('department/user/request/form',[RequestController::class,'add_request'])->name('submit.request.form');
+       Route::post('department/user/update/request/{id}',[RequestController::class,'updateRequest'])->name('update.request');
+
+
+       Route::post('department/user/addCalendarDate',[RequestController::class,'addCalendarDate']);
+
+       Route::get('department/calender',[RequestController::class,'department_calender'])->name('department_calender');
+    
+//     Route::get('department/calender',function () {
+//             return view('department_user_interfaces.department_calendar_interface_2');
+//         })->name('department_calender');
 
     Route::get('department/condidate/interview',function () {
             return view('department_user_interfaces.fsu_recommended_candidate_short_list_interview_1');

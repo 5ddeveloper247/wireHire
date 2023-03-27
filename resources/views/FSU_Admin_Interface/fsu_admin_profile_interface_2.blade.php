@@ -5,6 +5,9 @@
 @endpush
 
 @section('main-content')
+
+  @include('sweetalert::alert')
+
 <div class="page3 my-5 ">
     <div class="row m-0">
       <div class="col-md-3  bg-secondary" style="height:600px;">
@@ -24,32 +27,89 @@
           </div>
         </div>
       </div>
+
+     
+    
       <div class="col-md-9">
         <div class="pagebox1 p-4 m-4 bgform">
           <div class="row ">
             <div class="col-md-6 p-1 dainputda">
-              Genders
-              <input class="form-control" placeholder="Male">
+
+             <form action="{{route('admin.profile.update',$profile->id)}}" method="post">
+              @csrf
+
+             Name
+              <input class="form-control"  name='name'  value="{{$profile->name}}">
+            @error('name')
+              <div class="text-danger">{{$message}}</div>
+            @enderror
+             
               Email address
-              <input class="form-control" placeholder="email111@gmail.com">
+              <input class="form-control" name='email_address'  value="{{$profile->email_address}}">
+
+              @error('email_address')
+              <div class="text-danger">{{$message}}</div>
+               @enderror
+
               Position
-              <input class="form-control" placeholder="FSU Admin">
+              <input class="form-control"   disabled  value="{{ ($emProfile->position == 1) ? 'Fsu Admin':'' }}">
+              <input hidden  name="position" value="{{$emProfile->position}}">
+
+
+              @error('position')
+              <div class="text-danger">{{$message}}</div>
+               @enderror
+
               Department
-              <input class="form-control" placeholder="Computer Informtion Systems">
+              <select disabled class="form-control mb-3" >
+	              			<!-- <option value="" >Select Department</option> -->
+				          	@foreach ($departs as $depart )
+				            	<option  value="{{$depart->id}}" @if( $profile->depart_id == $depart->id) selected  @endif >{{$depart->department}}</option>
+				          	@endforeach
+	             
+	            		</select>
+              <input type="number" name="depart_id" hidden value="{{$profile->depart_id}}">
+              @error('depart_id')
+              <div class="text-danger">{{$message}}</div>
+               @enderror
+
               College
-              <input class="form-control" placeholder="College of Computer Science and Information Technology">
+              <input class="form-control" disabled   value="{{$profile->college}}">
+              <input type="text" name="college" hidden value="{{$profile->college}}">
+              @error('college')
+              <div class="text-danger">{{$message}}</div>
+              @enderror
             </div>
             <div class="col-md-6 p-1 dainputda">
-              Employ Manager
-              <input class="form-control" placeholder="Dr abdullah alqahtani">
+              Genders
+              <select name="gender" class="form-control">
+                  <option selected>--select--</option>
+                  <option value="female" {{ $profile->gender == 'female' ? 'selected' : '' }}>female</option>                                   
+                <option value="male" {{ $profile->gender == 'male' ? 'selected' : '' }}>male</option>
+              </select>
+              @error('gender')
+              <div class="text-danger">{{$message}}</div>
+            @enderror
               National ID
-              <input class="form-control" placeholder="123546789">
+              <input class="form-control" type="number" name='national_id' ty  value="{{$profile->national_id}}">
+              @error('number')
+              <div class="text-danger">{{$message}}</div>
+             @enderror
               University ID
-              <input class="form-control" placeholder="123546789">
+              <input class="form-control" name='university_id'  value="{{$profile->university_id}}">
+              @error('un')
+              <div class="text-danger">{{$message}}</div>
+               @enderror
               Address
-              <input class="form-control" placeholder="Kohbar,123">
+              <input class="form-control"  name='address' value="{{$profile->address}}">
+              @error('address')
+              <div class="text-danger">{{$message}}</div>
+            @enderror
               Phone Number
-              <input class="form-control" placeholder="123456789">
+              <input class="form-control" name="tel_number" type="tel" value="{{$profile->tel_number}}">
+              @error('tel_number')
+              <div class="text-danger">{{$message}}</div>
+            @enderror
               <div class="row">
                 <div class="col">
                   <button class="btn bgcolor btn-lg text-white mt-3 float-end ">Update Profile</button>
@@ -57,60 +117,73 @@
              </div>
              <div class="row">
                 <div class="col">
-                  <button class="btn bgcolor btn-lg text-white mt-3 float-end shoot1">Update Password</button>
+                  <a href='javascript:void(0)' class="btn bgcolor btn-lg text-white mt-3 float-end shoot1">Update Password</a>
                 </div>
               </div>
 
             </div>
 
           </div>
+          </form>
         </div>
 
       </div>
+
+      
     </div>
   </div>
 
 
     <!-- model -->
+
+    <form action="{{route('admin.password')}}" methode="post">
+      @csrf
     <div class="pop1 d-none">
         <div class="row p-3">
           <div class="col-md-5 m-auto bg-white popadd">
-      <div class="page6box py-3 p-2">
-        <span style="font-size:22px;" class="shoot1" >Update Password</span>
-        <script>
-          function playd(){
-            alert('ok dao');
-          }
-        </script>
-        <i class="fa-solid bandeka   fa-xmark " onclick="bsdo();"></i>
-      </div>
-      <div class="row p-2 mb-5">
-        <div class="col-md-6 ">
-          <p  style="font-size:18px;font-weight:bold;">Old Password</p>
+          <div class="page6box py-3 p-2">
+            <span style="font-size:22px;" class="shoot1" >Update Password</span>
+           
+            <i class="fa-solid bandeka   fa-xmark " onclick="bsdo();"></i>
           </div>
-        <div class="col-md-6">
-          <input class="form-control mb-3">
-          </div>
-        <div class="col-md-6 ">
-          <p  style="font-size:18px;font-weight:bold;">New Password</p>
-          </div>
-        <div class="col-md-6">
-          <input class="form-control mb-3">
-          </div>
-        <div class="col-md-6 ">
-          <p  style="font-size:18px;font-weight:bold;">Confirm Password</p>
-          </div>
-        <div class="col-md-6">
-          <input class="form-control mb-3">
-          <button class="btn btn-outline-secondary btn-md" onclick="bsdo();">Cancel</button>
-          <button class="btn btn-outline-secondary btn-md" onclick="playd()">Update</button>
-          </div>
+          <div class="row p-2 mb-5">
+            <div class="col-md-6 ">
+              <p  style="font-size:18px;font-weight:bold;">Old Password</p>
+              </div>
+            <div class="col-md-6">
+              <input type="password" class="form-control mb-3" name="oldpassword">
+              @error('oldpassword')
+                <div class="text-danger">{{$message}}</div>
+              @enderror
+              </div>
+            <div class="col-md-6 ">
+              <p  style="font-size:18px;font-weight:bold;">New Password</p>
+              </div>
+            <div class="col-md-6">
+              <input type="password"  class="form-control mb-3" name="password" >
+              @error('password')
+                <div class="text-danger">{{$message}}</div>
+              @enderror
+              </div>
+            <div class="col-md-6 ">
+              <p  style="font-size:18px;font-weight:bold;">Confirm Password</p>
+              </div>
+            <div class="col-md-6">
+              <input type="password"  class="form-control mb-3" name="password_confirmation">
+              @error('confirmation_password')
+                <div class="text-danger">{{$message}}</div>
+              @enderror
+              <button class="btn btn-outline-secondary btn-md" onclick="bsdo();">Cancel</button>
+              <button class="btn btn-outline-secondary btn-md" onclick="playd()">Update</button>
+              </div>
       
       </div>
       
           </div>
         </div>
       </div>
+
+    </form>
       <!-- end model -->
 @endsection
 

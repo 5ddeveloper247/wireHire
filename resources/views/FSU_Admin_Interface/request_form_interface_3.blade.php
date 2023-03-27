@@ -37,6 +37,7 @@
                   <th>Request Data</th>
                   <th>View Details</th>
                   <th>Forward Request</th>
+                  <th>Action</th>
                 </thead>
 
                 <tbody>
@@ -52,6 +53,9 @@
                     <td class="text-center">
                       <a   class=" bgcolor text-white arrowbtn"> <i class="fa-solid forword-arrow fa-arrow-right shoot2" ></i></a>
                     </td>
+                    <td>
+                      <a href="#"></a><i class="fa-solid fa-trash bg-danger p-3 text-white"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>Request ID</td>
@@ -65,6 +69,9 @@
                     <td class="text-center">
                       <a class=" bgcolor text-white arrowbtn"> <i class="fa-solid forword-arrow fa-arrow-right shoot2" ></i></a>
                     </td>
+                    <td>
+                      <a href="#"></a><i class="fa-solid fa-trash bg-danger p-3 text-white"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>Request ID</td>
@@ -78,6 +85,10 @@
                     <td class="text-center">
                       <a class=" bgcolor text-white arrowbtn"> <i class="fa-solid forword-arrow fa-arrow-right shoot2" ></i></a>
                     </td>
+                    <td>
+                      <a href="#"></a><i class="fa-solid fa-trash bg-danger p-3 text-white"></i></a>
+                    </td>
+
                   </tr>
                   <tr>
                     <td>Request ID</td>
@@ -91,6 +102,9 @@
                     <td class="text-center">
                       <a  class=" bgcolor text-white arrowbtn"> <i class="fa-solid forword-arrow fa-arrow-right shoot2" ></i></a>
                     </td>
+                    <td>
+                      <a href="#"></a><i class="fa-solid fa-trash bg-danger p-3 text-white"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>Request ID</td>
@@ -103,6 +117,9 @@
                     </td>
                     <td class="text-center">
                       <a class=" bgcolor text-white arrowbtn"> <i class="fa-solid forword-arrow fa-arrow-right shoot2" ></i></a>
+                    </td>
+                    <td>
+                      <a href="#"></a><i class="fa-solid fa-trash bg-danger p-3 text-white"></i></a>
                     </td>
                   </tr>
 

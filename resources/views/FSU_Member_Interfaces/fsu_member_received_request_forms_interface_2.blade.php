@@ -164,6 +164,8 @@
               </div>
             </div>
           </div>
+          <button type="submit" style="background-color : #1d1c47; color:white;" class="btn btn-lg  float-end">Create New Job Advertisement</button>
+
         </div>
       </div>
     </div>

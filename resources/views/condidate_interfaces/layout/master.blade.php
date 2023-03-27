@@ -71,7 +71,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mx-2" href="ContactUS Page.html">Contact Us</a>
+                            <a class="nav-link active mx-2" href="{{route('contact_us')}}">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active mx-2" href="{{ route('logout') }}">log out</a>

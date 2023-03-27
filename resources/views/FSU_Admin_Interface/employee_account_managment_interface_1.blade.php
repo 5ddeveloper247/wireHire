@@ -60,17 +60,17 @@
                       <td class="text-center text-white">
                         <form action="{{route('change.archieved.status',$employee->id)}}" method="post">
                           @csrf
+
+                          <span class="loader"></span>
                           <button type="submit"  name="changeStatus"  class="btn {{$employee->employee_status == 1 ? 'btn-success' : 'btn-danger' }} ">
-                             {{$employee->employee_status == 1 ? 'Active' : 'In Active'  }}
-                             
-                            
+                             {{$employee->employee_status == 1 ? 'Archieved' : 'In Active'  }}
                             </button>
-                            <span class="loader"></span>
-                         </form>
+                           
+                         </form> 
                       </td>
                       <td class="text-center text-white">
                         <a href="{{route('delete.employe.record',$employee->id)}}" style="text-decoration:none ; color : white"><i class="fa-solid fa-trash bg-danger p-3"></i></a>
-                        
+                        ss
                       </td>
                     </tr>
                     @endif

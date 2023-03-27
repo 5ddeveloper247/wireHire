@@ -99,7 +99,7 @@
                                 <div class="text-danger">{{$message}}</div>
                                 @enderror
 
-                                Birth Date
+                                Birth Date 
                                 <input type="date" name="date" value="{{ $candidate->date }}" class="form-control"
                                     placeholder="1/01/2010">
 
@@ -230,7 +230,7 @@
                                     <i class="fa-solid fa-file-pdf"></i>
                                     <span>
                                         <label for="resume">
-                                            Resume
+                                            {{$academic->resume}}
                                         </label>
                                         
                                     </span>
@@ -246,7 +246,7 @@
                                     <i class="fa-solid fa-file-pdf"></i>
                                     <span>
                                         <label for="transcript">
-                                            Transcript
+                                            {{$academic->transcript}}
                                           </label>
                                             
                                     </span>
@@ -263,7 +263,7 @@
                                  
 
                                        <label for="certificate">
-                                        Certificats
+                                        {{$academic->certificate}}
                                       </label>
                                         
                                     </span>
@@ -278,7 +278,7 @@
                                     <i class="fa-solid fa-file-pdf"></i>
                                     <span>
                                         <label for="teaching_prep">
-                                            teching_prep
+                                            {{$academic->teaching_prep}}
                                         </label>
                                         
                                      

@@ -79,7 +79,7 @@
         <div class="row">
           <div class="col-3">
             <a class="dropdown-item" href="{{route('fsu_member_job_interfaces_3')}}"> Member Job Position </a>
-            <a class="dropdown-item" href="{{route('fsu_member_specific_job')}}"> Member Specific Job </a>
+            <a class="dropdown-item" href="{{route('fsu.member.generate.reports')}}"> Generates Reports </a>
             {{-- <a class="dropdown-item" href="{{route('fsu_member_applicant_ranking')}}">Member Applicant Ranking</a> --}}
           </div>
           <div class="col-3">

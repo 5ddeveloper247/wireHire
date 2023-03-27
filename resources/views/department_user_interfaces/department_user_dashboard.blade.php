@@ -2,6 +2,7 @@
 @push('title', 'department user dashboard')
 @push('css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    
     <style>
         html,
         body {
@@ -76,6 +77,11 @@
             width: 100px;
             height: 76px;
         }
+        .pageselector a{
+            text-decoration: none;
+            color:black;
+        }
+        
     </style>
 @endpush
 @section('main-content')
@@ -95,7 +101,62 @@
                 <div class="Dashboardcard">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide pageselector">
+                                <a href="" >
+                                <div class="dataimage">
+                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
+
+                                    <div class="dataslide p-3 ">
+                                        <h1>Request Form</h1>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Delectus nisi enim veritatis, deleniti
+                                            temporibus quia dolorum, provident doloribus
+                                            dignissimos minima optio sed consequuntur vel dolor
+                                            voluptatum corporis. Laboriosam, suscipit inventore!
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                            <div class="swiper-slide pageselector">
+                                <a href="">
+                                <div class="dataimage">
+                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
+
+                                    <div class="dataslide p-3">
+                                        <h1>Candidate shortlist</h1>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Delectus nisi enim veritatis, deleniti
+                                            temporibus quia dolorum, provident doloribus
+                                            dignissimos minima optio sed consequuntur vel dolor
+                                            voluptatum corporis. Laboriosam, suscipit inventore!
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                            </div>
+                   
+                            <div class="swiper-slide pageselector">
+                                <a href="">
+                                <div class="dataimage">
+                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
+
+                                    <div class="dataslide p-3">
+                                        <h1>Calendar</h1>
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Delectus nisi enim veritatis, deleniti
+                                            temporibus quia dolorum, provident doloribus
+                                            dignissimos minima optio sed consequuntur vel dolor
+                                            voluptatum corporis. Laboriosam, suscipit inventore!
+                                        </p>
+                                    </div>
+                                </div>
+                                </a
+                            </div>
+                            {{-- <div class="swiper-slide">
                                 <div class="dataimage">
                                     <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
 
@@ -238,75 +299,11 @@
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="dataimage">
-                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
-
-                                    <div class="dataslide p-3">
-                                        <h1>heading</h1>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Delectus nisi enim veritatis, deleniti
-                                            temporibus quia dolorum, provident doloribus
-                                            dignissimos minima optio sed consequuntur vel dolor
-                                            voluptatum corporis. Laboriosam, suscipit inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="dataimage">
-                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
-
-                                    <div class="dataslide p-3">
-                                        <h1>heading</h1>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Delectus nisi enim veritatis, deleniti
-                                            temporibus quia dolorum, provident doloribus
-                                            dignissimos minima optio sed consequuntur vel dolor
-                                            voluptatum corporis. Laboriosam, suscipit inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="dataimage">
-                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
-
-                                    <div class="dataslide p-3">
-                                        <h1>heading</h1>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Delectus nisi enim veritatis, deleniti
-                                            temporibus quia dolorum, provident doloribus
-                                            dignissimos minima optio sed consequuntur vel dolor
-                                            voluptatum corporis. Laboriosam, suscipit inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="dataimage">
-                                    <img src="{{ asset('image/background.jpg') }}" class="img-fluid" />
-
-                                    <div class="dataslide p-3">
-                                        <h1>heading</h1>
-                                        <p>
-                                            Lorem ipsum dolor sit amet consectetur adipisicing
-                                            elit. Delectus nisi enim veritatis, deleniti
-                                            temporibus quia dolorum, provident doloribus
-                                            dignissimos minima optio sed consequuntur vel dolor
-                                            voluptatum corporis. Laboriosam, suscipit inventore!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> --}}
                         </div>
-                        <div class="swiper-button-next"></div>
+                        {{-- <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination"></div> --}}
 
                         <!-- <div class="maincarddo 
  cardcolor" id="a">
@@ -397,7 +394,7 @@
             loop: true,
             loopFillGroupWithBlank: true,
             pagination: {
-                el: ".swiper-pagination",
+                el: "",
                 clickable: true,
             },
             navigation: {

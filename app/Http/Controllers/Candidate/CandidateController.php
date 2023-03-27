@@ -1,11 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Candidate;
-
-
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\candidatemodel\Academic;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Session;
@@ -14,7 +12,6 @@ class CandidateController extends Controller
 {
     public function acadamic_reg(Request $request)
     {
-   
     
         $required = '';
         if(Session()->has('academic')){
@@ -36,6 +33,8 @@ class CandidateController extends Controller
             'certificate' => $required,
             'teaching_prep' => $required,
         ]);
+
+        
    
         try{
             DB::beginTransaction();
@@ -75,13 +74,12 @@ class CandidateController extends Controller
      
         $academic->save();
 
-        
             DB::commit();
            
         }catch(\Exception $e){
            
             DB::rollback();
-            dd('die');
+            
         }
         if(Session()->has('academic')){
             

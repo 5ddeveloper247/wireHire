@@ -1,19 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
-
-
 use App\Http\Controllers\Controller;
+use App\Models\admin\Employee;
 use Illuminate\Http\Request;
 use App\Models\candidatemodel\Candidate;
-use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\hash;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\candidatemodel\Academic;
 // use Illuminate\Support\Facades\Rule;
 use App\Models\User;
-
-
 class AuthController extends Controller
 {
 
@@ -65,13 +61,9 @@ class AuthController extends Controller
 
     public function candidatelogin(Request $request)
     {
-
         $request->validate([
-
             'email' => 'required|email',
             'password' => 'required',
-
-
         ]);
 
         // candidate login..... 
@@ -82,24 +74,27 @@ class AuthController extends Controller
             Session()->put('academic',1);
             Alert::success('Success', 'You\'ve loged in successfully');
             return redirect()->route('condidate_dashboard');
-
         }
 
         // user login ......
 
-        $user = User::where('email', $request->email)->first();
-        if ($user && hash::check($request->password, $user->password)) {
-            Session()->put('user_login', $user->id);
-            Session()->put('user_role', $user->role);
-            // Session()->put('password',$user->password);
-            
-            Alert::success('Success', 'You\'ve loged in successfully');
-            return redirect()->route($this->redirectUrl($user->role));
-        }
-
-
-        Alert::error('fail', 'Something Wrong !');
-        return redirect("login")->with('fail', 'Check Your Loged In Information');
+        $user = User::where('email', $request->email)->first();          
+            if ($user && hash::check($request->password, $user->password)) {
+                $en = Employee::where('user_id',$user->id)->where('employee_status',1)->count();
+                if($en){
+                    Alert::error('Fail','Your Account Have Been Archieved');
+                    return redirect()->back();
+                
+                }
+                Session()->put('user_login', $user->id);
+                Session()->put('user_role', $user->role);
+                // Session()->put('password',$user->password);
+                
+                Alert::success('Success', 'You\'ve loged in successfully');
+                return redirect()->route($this->redirectUrl($user->role));
+            }
+            Alert::error('fail', 'Something Wrong !');
+            return redirect("login")->with('fail', 'Check Your Loged In Information');
     }
 
     public function redirectUrl($role)
@@ -109,10 +104,8 @@ class AuthController extends Controller
         if ($role == 2)
             return 'member.interfaces';
         if ($role == 3 || $role == 4 )
-            return 'depart_user_profile';
+            return 'depart_user_dashoard';
     }
-
-
 }
 
 ?>

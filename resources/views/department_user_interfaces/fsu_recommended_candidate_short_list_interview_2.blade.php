@@ -22,6 +22,8 @@
               <th>Department</th>
               <th>College</th>
               <th>Details</th>
+              <th>Application</th>
+              <th>Comments</th>
             </thead>
 
             <tbody>
@@ -32,6 +34,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>First List 1</td>
@@ -40,6 +60,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>First List 1</td>
@@ -48,6 +86,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>First List 1</td>
@@ -56,6 +112,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                 <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -64,6 +138,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -72,6 +164,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -80,6 +190,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -88,6 +216,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -96,6 +242,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -104,6 +268,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>
@@ -112,6 +294,24 @@
                 <td>CIS</td>
                 <td>CCSIT</td>
                 <td><a class="text-decoration-none" href="#">View Profile</a></td>
+                <td>
+                  <div class="dropdown">
+                    <button id="selected" style="background-color : #1d1c47; color:white;" class="btn btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                         Application
+                    </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+                            <form>
+                             
+                            <li><button type="submit" class="dropdown-item" >Accepted</button></li>
+                            <li><button  type="submit" class="dropdown-item" >Rejected</button></li>
+
+                          </form>
+                     
+                    </ul>
+                  </div>
+                </td>
+                <td>Comments</td>
               </tr>
               <tr>
                 <td>Testing List 1</td>

@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
-
-
-
 class EmployeController extends Controller
 {
     public function employe(){
@@ -82,13 +79,11 @@ class EmployeController extends Controller
         
         $employee_view = Employee::find($id);
         $departs = Department::all();
-        return view('FSU_Admin_Interface.view_employe_profile',compact('employee_view','departs'));
+        return view('FSU_Admin_interface.view_employe_profile',compact('employee_view','departs'));
 
     }
 
-    public function update_employe(Request $request,$id){
-    
-       
+    public function update_employe(Request $request,$id){ 
         $update = Employee::where('id',$id)->with('User')->first();
        
         $request->validate([
@@ -143,7 +138,6 @@ class EmployeController extends Controller
 
     public function delete_employe($id){
     
-
         $employe = Employee::find($id);
        
         $user = User::find($employe->user_id);
@@ -153,16 +147,13 @@ class EmployeController extends Controller
 
         return redirect()->back();
 
-
     }
 
     // all Archieved accounts..   
-
-    public function archievedEmploye(){
+   public function archievedEmploye(){
         $employes = Employee::with('user','Department')->get();
          return view('FSU_Admin_Interface.archieved_accounts_interface',compact('employes'));
     }
-
     // archieved accounts status   ...
 
     public function archieved_accounts($id){
@@ -177,7 +168,18 @@ class EmployeController extends Controller
             
         $employe->save();
         return redirect()->back();
-       
+          
+    }
+
+    public function activateAccount($id){
+        $employe = Employee::find($id);
+           
+        if($employe->employee_status == 1){
+            $employe->employee_status = 0;
+        }
+        
+        $employe->save();
+        return redirect()->back();
     }
 
 }
